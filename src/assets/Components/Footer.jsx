@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+import Antigravity from "./Antigravity";
+
 import {
   FaFacebookF,
   FaWhatsapp,
@@ -7,19 +9,40 @@ import {
 } from "react-icons/fa";
 import { GiGraduateCap } from "react-icons/gi";
 import { NavLink } from "react-router";
+import { SchoolContext } from "./Schoolcontext";
 const Footer = () => {
-  const linkStyle = ({ isActive }) =>
-    `relative transition-all duration-200 inline-block
-    ${
-      isActive
-        ? "text-red-500 after:w-full"
-        : "text-black hover:text-red-500 after:w-0 hover:after:w-full"
-    }
-    after:content-[''] after:absolute after:left-0 after:-bottom-1
-    after:h-[2px] after:bg-red-500 after:transition-all after:duration-200`;
+  const { linkStyle } = useContext(SchoolContext);
 
   return (
-    <footer className="w-full bg-red-200 px-[5%] py-12">
+    <footer
+      style={{
+        backgroundColor: "rgba(50 ,0, 0, 0.5)",
+        width: "100%",
+        height: "400px",
+        position: "relative",
+        padding: "12 5",
+      }}
+      className="relative h-full "
+    >
+      <div className="absolute inset-0 w-full h-[80vh]">
+        <Antigravity
+          count={100}
+          magnetRadius={20}
+          ringRadius={2}
+          waveSpeed={0.4}
+          waveAmplitude={1}
+          particleSize={1.5}
+          lerpSpeed={0.05}
+          color="#EF5350"
+          autoAnimate
+          particleVariance={2}
+          rotationSpeed={0}
+          depthFactor={1}
+          pulseSpeed={3}
+          particleShape="capsule"
+          fieldStrength={13}
+        />
+      </div>
       <div className="max-w-[1400px] mx-auto">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>

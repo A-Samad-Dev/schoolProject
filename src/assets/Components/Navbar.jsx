@@ -82,22 +82,6 @@ const Navbar = () => {
             </NavLink>
 
             <NavLink
-              to={"/academics"}
-              className={({ isActive }) =>
-                `relative transition-all duration-200
-     ${
-       isActive
-         ? "text-red-500 after:w-full"
-         : "text-black hover:text-red-500 after:w-0 hover:after:w-full"
-     }
-     after:content-[''] after:absolute after:left-0 after:-bottom-1
-     after:h-0.5 after:bg-red-500 after:transition-all after:duration-200`
-              }
-            >
-              Academics
-            </NavLink>
-
-            <NavLink
               to={"/contact"}
               className={({ isActive }) =>
                 `relative transition-all duration-200
@@ -127,6 +111,21 @@ const Navbar = () => {
               }
             >
               FAQs
+            </NavLink>
+            <NavLink
+              to={"/admin"}
+              className={({ isActive }) =>
+                `relative transition-all duration-200
+     ${
+       isActive
+         ? "text-red-500 after:w-full"
+         : "text-black hover:text-red-500 after:w-0 hover:after:w-full"
+     }
+     after:content-[''] after:absolute after:left-0 after:-bottom-1
+     after:h-0.5 after:bg-red-500 after:transition-all after:duration-200`
+              }
+            >
+              Admin
             </NavLink>
           </ul>
         </div>
@@ -173,6 +172,9 @@ const Navbar = () => {
 
             <NavLink to="/faq" onClick={() => setopen(false)}>
               FAQs
+            </NavLink>
+            <NavLink to="/admin" onClick={() => setopen(false)}>
+              Admin
             </NavLink>
           </ul>
         </div>

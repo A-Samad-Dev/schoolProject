@@ -1,1 +1,17 @@
-{}
+{
+  "student": [
+    {
+      "id": "e016",
+      "studentId": "4",
+      "firstname": "Oloko",
+      "lastname": "Adesola",
+      "email": "olokoadesola1@gmail.com",
+      "phoneNumber": "+2349025140981",
+      "gender": "Female",
+      "presentClass": "Primary 1",
+      "department": "commercial",
+      "password": "password"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
